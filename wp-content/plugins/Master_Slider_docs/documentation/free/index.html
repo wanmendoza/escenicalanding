@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Master Slider WordPress Plugin (Free version) - Documentation</title>
+		
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shCore.css" media="all">
+		<link rel="stylesheet" type="text/css" href="../syntax-highlighter/styles/shThemeDefault.css" media="all">
+		<link rel="stylesheet" href="../assets/css/main.css" type="text/css" media="screen"/>
+		
+		<link rel="icon" type="image/png" href="../assets/images/fav.png" />
+	</head>
+	
+	<body>
+		
+		<header class="header">
+			<img src="../assets/images/doc-title.png" class="logo" style="margin: 13px 18px;" />
+			<nav class="navbar mainnav" >
+				<ul class="nav">
+					<li><a href="http://www.averta.net/">HOME</a></li>
+					<li><a href="http://wordpress.org/tags/master-slider/" target="_blank">SUPPORT FORUM</a></li>
+					<li><a href="http://wordpress.org/plugins/master-slider/faq/" target="_blank">FAQ</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div id="loading">
+			Loading data ...
+		</div>
+		
+		<div id="main-container" role="main">
+			<aside id="sidebar">
+				<nav class="toc">	
+					
+					<ul class="nav nav-list">
+						<li class="nav-header">
+							Table of Contents
+						</li>
+						<li>
+							<a href="#intro">Introduction</a>
+						</li>
+						<li>
+							<a href="#installing">Installing</a>
+						</li>
+						<li>
+							<a href="#updating">Updating</a>
+						</li>
+						<li>
+							<a href="#new-slider">Create New Slider</a>
+						</li>
+						<li>
+							<a href="#slider-settings">Slider Settings</a>
+						</li>
+						<li>
+							<a href="#slides">Working with Slides</a>
+						</li>
+						<li>
+							<a href="#slider-controls">Adding Slider Controls</a>
+						</li>
+						<li>
+							<a href="#skins">Slider skins</a>
+						</li>
+						<li>
+							<a href="#in-wp">Using Slider in WordPress</a>
+						</li>
+						<li>
+							<a href="#slider-callbacks">Using Slider API and Callbacks</a>
+						</li>
+						<li>
+							<a href="#export-import">Export and Import</a>
+						</li>
+						<li>
+							<a href="#embed-url">YouTube/Viemo Embed URL</a>
+						</li>
+						<li>
+							<a href="#language-i18n">Language and localization</a>
+						</li>
+						<li>
+							<a href="#rate">I want to rate Master Slider</a>
+						</li>
+						<li>
+							<a href="#support">Support</a>
+						</li>
+						<li>
+							<a href="#donate">Donate</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="update-cont">
+					<p class="cpr">
+						Version 1.0.9, Last update: 23/7/2014
+						<br/>
+						&copy; <a href="http://www.averta.net/" target="_blank">Averta Ltd.</a> All rights reserved.
+					</p>
+				</div>
+				<div class="toggle"> </div>
+			</aside><!-- sidebar -->
+
+			<section class="container" id="content">
+				
+				<article class="content-section" id="intro">
+					<h4>Thank you</h4>
+					<p>At first we would like to say thank you for choosing <a href="http://wordpress.org/plugins/master-slider/" target="_blank" >Master Slider WordPress Plugin</a>. In this documentation you will find everything you need to use Master Slider WordPress (free version).
+					<br> If you have any questions which are not covered in this documentation, please take a look at <a href="http://wordpress.org/tags/master-slider" target="_blank" >support</a> section. </p>
+					<hr>
+					<h4>About the Master Slider WordPress</h4>
+					<p>Master Slider WordPress is a powerful and yet easy to use image and content slider for WordPress, with super smooth hardware accelerated transitions. It supports touch navigation with pure swipe gesture that you have never experienced before. It’s a truly responsive and device friendly slider which works perfect in all major devices. </p>
+				</article>
+
+				<article class="content-section" id="installing">
+					<section class="active" style="">
+
+						<h4>Automatic installation (easiest way)</h4>
+						<p>
+							To do an automatic install of Master Slider, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.<br />
+
+							In the search field type <code>Master Slider</code> and click Search Plugins. Once you have found it you can install it by simply clicking "Install Now".
+						</p>
+						
+						<hr />
+
+						<h4>Manual Installation</h4>
+						<strong>Installing using WordPress Dashboard</strong>
+
+						<ol>
+							<li>Download <code>master-slider.zip</code> from <a href="http://wordpress.org/plugins/master-slider/" target="_blank" >Master Slider plugin page on WordPress.org</a>
+							<li>Navigate to the <code>Add New</code> in the plugins dashboard</li>
+							<li>Navigate to the <code>Upload</code> area</li>
+							<li>Select <code>master-slider.zip</code> from your computer</li>
+							<li>Click <code>Install Now</code></li>
+							<li>Activate the plugin in the Plugin dashboard</li>
+						</ol>
+						<p>
+							<span class="label label-info">Note</span> In this method the server that hosts your website should allow upload limits greater than <strong>6 MB</strong>. Most hosting providers have only up to 2MB file upload limit.<br> In this case you need to upload the theme by FTP or contact your host provider to increase upload limit.
+		                </p>
+
+						<hr />
+
+						<strong>Installibg by FTP</strong>
+						<div >
+							<p>First, you need a tool for uploading plugin files to your site, you can use filemanager from cPanel or any FTP clients. Some good FTP clients :</p>
+							<ul>
+								<li><a href="http://codex.wordpress.org/Using_FileZilla" target="_blank">FileZilla</a> for windows.</li>
+								<li><a href="http://cyberduck.ch/" target="_blank">Cyberduck</a> for Mac.</li>
+							</ul>
+						</div>
+						<ol>
+							<li>Download <code>master-slider.zip</code> from <a href="http://wordpress.org/plugins/master-slider/" target="_blank" >Master Slider plugin page on WordPress.org</a>
+							<li>Extract the <code>master-slider</code> directory to your computer</li>
+							<li>Upload the master-slider directory to the <code>/wp-content/plugins/</code> directory</li>
+							<li>Activate the plugin in the Plugin dashboard</li>
+						</ol>
+						
+						Also WordPress codex contains <a href="http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation">instructions on how to do this here.</a>
+
+						<br /><hr /><br />
+
+						<h4>Server Minimum Requirements</h4>
+						<ul>
+							<li>WordPress 3.6 or greater</li>
+							<li>PHP version 5.2.4 or greater</li>
+							<li>MySQL version 5.0 or greater</li>
+						</ul>
+
+					</section>
+					<hr>
+				</article>
+
+			
+				<article class="content-section" id="updating">
+					<h4>Updating</h4>
+					<p>You can use automatic update to update the plugin safely.</p>
+				</article>
+
+				<article class="content-section" id="new-slider">
+					<div class="row-fluid">
+						<div class="span4">
+							<h3><strong>Creating New Slider</strong></h3>
+							<p>
+								<ul>
+									<li>Login to your wordpress admin panel and click on <code>MasterSlider</code>  link in admin sidebar menu.</li>
+									<li>In Masterslider page click on <code>Create New Slider</code> button.</li>
+									
+								</ul>
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/master-slider-free-wordpress-admin-panel.png" height="865" width="1503" alt="Master Slider Create New Slider" class="img-screenshot">
+						</div>
+					</div>
+					
+					<hr>
+
+					<div class="row-fluid">
+						<div class="span4">
+							<p>
+								<ul>
+									<li>Now a popup window will be open as shown in screenshot.</li>
+									<li>Select slider type and press <code>CREATE</code> button.</li>
+									<li>Your request will be proceed and you will be redirected to MasterSlider's panel page.</li>
+								</ul>
+																
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/master-slider-wp-free-create-new.jpg" height="802" width="1244" alt="Master Slider WP plugin-free-create new" class="img-screenshot">
+						</div>
+					</div>
+				</article>
+
+				<article class="content-section" id="slider-settings">
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>General Settings</h4>
+							<dl>
+								<dt>Slider name</dt>
+								<dd>Specifies a name for your slider. It only used in admin area.</dd>
+								<dt>Slider width</dt>
+								<dd>Base width of slider in pixels, slider will resize layers and other elements under this value.</dd>
+								<dt>Slider height</dt>
+								<dd>Base height of slider in pixels.</dd>
+								<span class="label label-info"> Note </span> Automatically crop and resize slider images based on above size if it is on.
+								<dt>Slider sizing method</dt>
+								<dd>The sizing method of slider, with this you can make slider <code>boxed</code> or <code>fullwidth</code></dd>
+								<dt>Auto-height Slider</dt>
+								<dd>Whether the slider adapts its height to each slide height.</dd>
+								<dt>Slider wrapper width</dt>
+								<dd>It will set the wrapper width of slider (slider parent) if it leaves empty slider will set it automaticly (Slider uses this to align slider controls).</dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/slider-settings-general.png" alt="Master Slider General Settings" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+						<h4>Slider Template and Transition</h4>
+							<dl>
+								<dt>Transition</dt>
+								<dd>Specifies the transition of changing slides in slider.</dd>
+								<dt>Transition speed</dt>
+								<dd>The speed amount of changing transition. Higher 50 values are not recommended.</dd>
+								<dt>Direction</dt>
+								<dd>Specifies slide changing direction, It may not supported by some templates.</dd>
+								<dt>Slide space</dt>
+								<dd>The spacing value between slides in pixels.</dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-setting-transition.jpg" height="225" width="527" alt="Master Slider Templates Settings" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+						<h4>Slider Navigation and Preloading</h4>
+							<dl>
+								<dt>Slide show</dt>
+								<dd>Enables the autoplay slideshow.</dd>
+								<dt>Loop navigation</dt>
+								<dd>Enables the continuous sliding mode.</dd>
+								<dt>Pause at the end slide</dt>
+								<dd>Whether the slider pauses slideshow when it reaches to last slide.</dd>
+								<dt>Pause on hover</dt>
+								<dd>Whether the slider temporary pause slideshow on mouse cursor moves over slider.</dd>
+								<dt>Random order</dt>
+								<dd>Whether using random slide ordering.</dd>
+								<dt>Start with slide</dt>
+								<dd>Specifies the fist slide in slider.</dd>
+
+								<hr>
+
+								<dt>Touch swipe navigation</dt>
+								<dd>Whether the drag/swipe navigation is enabled.</dd>
+								<dt>Mouse swipe navigation</dt>
+								<dd>Whether the user can use mouse drag navigation.</dd>
+								<dt>Use grab cursor</dt>
+								<dd>Whether the slider uses grab mouse cursor while swiping with mouse.</dd>
+								<dt>Mouse wheel</dt>
+								<dd>Enables mouse scroll wheel navigation.</dd>
+								<dt>Slide preloading</dt>
+								<dd>Here you can specify that how slider loads images, it supports three different methods: <code>Load slides in sequence</code>, <code>Load all slides before init</code> and <code>Load nearby slides</code> which takes the number of current slide's nearby slides that should loads at a same time.</dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-setting-navigation.jpg" alt="Master Slider Navigation Settings" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+						<h4>Slider Appearance</h4>
+							<dl>
+								<dt>Skin</dt>
+								<dd>Here you can specify the skin of your slider.</dd>
+								<dd>you can take a look at all skins <a href="#skins">here..</a></dd>
+								<dt>Align center slider controls</dt>
+								<dd>Whether the slider aligns UI controls to center. This option is only effective in full width mode.</dd>
+								<dt>Background image</dt>
+								<dd>Here you can choose a background image for the slider.</dd>
+								<dt>Background color</dt>
+								<dd>Specifies the background color of slider</dd>
+								<dt>Class name</dt>
+								<dd>Here you can add custom class names to the slider main element. Multiple class names must be separated by white space.</dd>
+								<dt>Inline style</dt>
+								<dd>Here you can add custom CSS style to slider main element. For example <code>border:solid 1px red;</code> </dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/slider-settings-appearance.png" alt="Master Slider Appearance Settings" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+				</article>
+
+				<article class="content-section" id="slides">
+					<div class="row-fluid">
+						<div class="span4">
+						<h4>Slides</h4>
+						<p>Here you can see already added slides to the slider, you can add a new slide to slider by clicking on <code>Add Slide</code><br>
+						Also you can change the sort of slides by drag and drop each one in this list.
+						</p>
+						<dl>
+							<dt>Remove slide</dt>
+							<dd>You can remove the slide by clicking on <img src="../assets/images/screenshots/remove.png" alt="remove"> icon.</dd>
+							<dt>Duplicate slide</dt>
+							<dd>For creating a duplicate from a slide you can click on <img src="../assets/images/screenshots/duplicate.png" alt="duplicate"> icon.</dd>
+							<dt>Show or hide slide</dt>
+							<dd>You can show or hide each slide by clicking on <img src="../assets/images/screenshots/hide.png" alt="show/hide"> icon. Slider doesn't show hidden slides in front end.</dd>
+						</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-slides-add-new.jpg" height="191" width="529" alt="Master Slider Slides" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+						<h4>Slide background and thumbnail</h4>
+						<dl>
+							<dt>Background</dt>
+							<dd>Specifies current slide background.</dd>
+							<dt>Fillmode</dt>
+							<dd>Specifies the slide background scaling method.</dd>
+							<dt>Thumbnail</dt>
+							<dd>Here you can add a thumbnail for the slide. Please make sure that you have added <code>Thumblist</code> control to the slider or the selected template supports thumbs.</dd>
+						</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-slides-background.jpg" height="201" width="813" alt="Master Slider Slide Background Settings" class="img-screenshot">
+						</div>
+					</div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+						<div class="span4">	
+						<h4>Slide video and link</h4>
+						<p>Here you can add Youtube or Vimeo video as a video slide and also you can make link each slide of your slider.</p>
+						<dl>
+							<dt>URL</dt>
+							<dd>You can set a URL when user click on this slide it links to URL.</dd>
+							<dt>Video embed src</dt>
+							<dd>You can add Youtube and Vimeo src to create an slide for that video.</dd><br />
+							<dd><span class="label label-info">Note</span> To find YouTube/Viemo Embed URL you can Open the video in YouTube/Vimeo, play video and right-click on it, select "Copy embed code" then paste the embed code in a text editor, now you can see video embed URL in embed code which specified as iframe src.</dd>
+								
+						</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-slides-video-background.jpg" height="259" width="644" alt="Master Slider Slide Video Background Settings" class="img-screenshot">
+						</div>
+					</div>
+					
+					<hr />
+
+					<div class="row-fluid">
+						<div class="span4">	
+							<h4>Slide Info</h4>
+							<p>Here you can add caption or any html content as slider info. The content will be appear on each slider base on your configurations in <code>Slide Info</code> control (located under <a href="#slider-controls">Slider controls</a> tab)</p>
+
+							<p><span class="label label-info">Note</span> You should add "slide info" control in order to see slider info on slider. To do that, click on <a href="#slider-controls">Slider controls</a> tab, select and add <code>slide info</code> control</p>
+						
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-slide-info.jpg" height="416" width="921" alt="Master Slider WordPress Slide Info" class="img-screenshot">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="row-fluid">
+						<div class="span4">	
+						<h4>Slide misc</h4>
+						<p>Here you can add custom CSS class or id to each slide and also add alt attribute to slide background image.</p>
+						<dl>
+							<dt>Class name</dt>
+							<dd>you can add a CSS class to slide.</dd>
+							<dt>CSS id</dt>
+							<dd>you can add a CSS id to slide.</dd>
+							<dt>Background color</dt>
+							<dd>It will be used to add color to slide background.</dd>
+							<dt>Alt text</dt>
+							<dd>you can add an alt text attribute to the image in your background of slide.</dd>
+						</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/free/slider-slide-misc.jpg" height="260" width="750" alt="Master Slider Slide Video Background Settings" class="img-screenshot">
+						</div>
+					</div>
+					<hr>
+				</article>
+
+				<article class="content-section" id="slider-controls">
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Adding Slider Controls</h4>
+							<p>You can select one type of controller from the dropdown menu and by clicking on <img src="../assets/images/screenshots/add.png" alt="Master Slider layer timeline" class="img-screenshot"> it will add to "Used control" list. You can customize each control type by clicking on that.  
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/slider-control.png" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Arrows Control Options</h4>
+							<p>You have the abilities of hiding arrows while mouse is out of slider, showing arrows over videoplayer and hiding arrows in specific size of windows and less than that.</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/arrows-control.png" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Line Timer Control Options</h4>
+							<p>You have the abilities of hiding line timer while mouse is out of slider, showing line timer over videoplayer and hiding line timer in specific size of windows and less than that.</p>
+							<dl>
+								<dt>Align control</dt>
+								<dd>Specifies the place of line timer.</dd>
+								<dt>Line timer color</dt>
+								<dd>Specifies the color of line timer.</dd>
+								<dt>Line timer width</dt>
+								<dd>Set the width of line timer.</dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/line-t-control.png" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Slide Info Control Options</h4>
+							<p>You have the abilities of hiding slide info while mouse is out of slider, showing slide info over videoplayer and hiding slide info in specific size of windows and less than that. Also you can insert the slide info inside of slider.</p>
+							<dl>
+								
+								<dt>Align control</dt>
+								<dd>Specifies the place of slide info.</dd>
+								<dt>slide info margin</dt>
+								<dd>Specifies the margin for slide info.</dd>
+								<dt>slide info width</dt>
+								<dd>Specifies the width for slide info in pixel.</dd>
+								<dt>slide info height</dt>
+								<dd>Specifies the height for slide info in pixel.</dd>
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/slide-control.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Bullets Control Options</h4>
+							<p>You have the abilities of hiding bullets while mouse is out of slider, showing bullets over videoplayer and hiding bullets in specific size of windows and less than that.</p>
+							<dl>
+								
+								<dt>Align control</dt>
+								<dd>Specifies the place of bullets.</dd>
+								<dt>slide info margin</dt>
+								<dd>Specifies the margin for bullets.</dd>
+								
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/bullets-control.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Circle Timer Control Options</h4>
+							<p>You have the abilities of hiding circle timer while mouse is out of slider, showing circle timer over videoplayer and hiding circle timer in specific size of windows and less than that.</p>
+							<dl>
+								
+								<dt>Circle stroke</dt>
+								<dd>Specifies the stroke of circle in pixel.</dd>
+								<dt>Circle radius</dt>
+								<dd>Specifies the radius of circle in pixel.</dd>
+								<dt>Circle color</dt>
+								<dd>Specifies the fill color of circle.</dd>
+								
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/circle-t-control.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Scrollbar Control Options</h4>
+							<p>You have the abilities of hiding Scrollbar while mouse is out of slider, showing Scrollbar over videoplayer and hiding Scrollbar in specific size of windows and less than that. Also you can insert the Scrollbar inside of slider.</p>
+							<dl>
+								
+								<dt>Scrollbar handle color</dt>
+								<dd>Specifies the color for Scrollbar handle.</dd>
+								<dt>Align control</dt>
+								<dd>Specifies the place of Scrollbar.</dd>
+								<dt>Scrollbar width</dt>
+								<dd>Specifies the width for Scrollbar.</dd>
+								<dt>Scrollbar margin</dt>
+								<dd>Specifies the margin for Scrollbar.</dd>
+								
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/scrollbar-control.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+					<hr>
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Thumblist/Tabs Control Options</h4>
+							<p>You have the abilities of hiding thumblist/tabs while mouse is out of slider, showing thumblist/tabs over videoplayer and hiding thumblist/tabs in specific size of windows and less than that. Also you can insert the thumblist/tabs inside of slider.</p>
+							<dl>
+								<dt>Thumb background fill mode</dt>
+								<dd>Specifies the background fill mode of thumblist/tabs.</dd>
+								<dt>Align control</dt>
+								<dd>Specifies the place of thumblist/tabs.</dd>
+								<dt>Thumblist/Tabs margin</dt>
+								<dd>Specifies the margin for thumblist/tabs.</dd>
+								<dt>Appearance</dt>
+								<dd>Choose thumblist or tabs.</dd>
+								<dt>Thumblist/Tabs info width</dt>
+								<dd>Specifies the width for thumblist/tabs in pixel.</dd>
+								<dt>Thumblist/Tabs info height</dt>
+								<dd>Specifies the height for thumblist/tabs in pixel.</dd>
+								<dt>Space between thumbs/tabs</dt>
+								<dd>Specifies the the space among thumbs in thumblist mode or tabs in tab mode.</dd>
+								
+							</dl>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/tabs-control.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+				</article>
+
+				<article class="content-section" id="in-wp">
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Inserting the slider with shortcode</h4>
+							<p>
+								You can place your sliders into pages and posts with their shortcodes. You can find the shortcode for each slider in Master Slider admin page next to their names in the list view. To insert the slider, edit a page or post and insert its shortcode into the WordPress text editor.
+			               </p>
+			            </div>
+			            <div class="span8">
+							<img src="../assets/images/screenshots/use-slider-shortcode.png" alt="Master Slider use shortcode" class="img-screenshot">	
+						</div>
+			        </div>
+
+					<hr>
+
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Inserting the slider with the Master Slider WP widget</h4>
+							<p>
+								MasterSlider WP supports widgets, so you can place your slider in your front-end page just by a drag n' drop. To do that, navigate to the Appearance menu on your left sidebar and select "Widgets". Grab the MasterSlider WP Widget and drop it into one of your widget area. 
+
+								Please note that some themes may not support a widget area what you need. In this case, you can create a new widget area by editing your theme files.
+			                </p>
+			            </div>
+			            <div class="span8">
+							<img src="../assets/images/screenshots/slider-widget.png" alt="Master Slider WP Widget" class="img-screenshot">	
+						</div>
+			        </div>
+					
+					<hr>
+
+					<div class="row-fluid">
+						<div >
+							<h4>Calling the slider from your theme files</h4>
+							<p>
+								Because a slider can be an integral part of your site, you may want to place it into your theme files. There are some PHP function which you can call for example from the header.php file of your theme and it inserts your slider into your home page or certail other pages. Here they are :
+							</p>
+
+							<hr>
+
+							<h5>Description</h5>
+							<p>Displays MasterSlider based on the slider id passed to.</p>
+
+							<h5>Usage :</h5>
+							<p><code>&lt;?php masterslider ( $slider_id ); ?&gt;</code></p>OR
+							<p><code>&lt;?php echo get_masterslider ( $slider_id ); ?&gt;</code></p><br />
+
+							<h5>Example :</h5>
+							<p><code>&lt;?php echo get_masterslider ( 2 ); ?&gt;</code></p><br />
+
+							<h5>Parameters :</h5>
+							<dl>
+								<dt><tt>$slider_id</tt></dt>
+								<dd> (int) The slider ID that can be found on the plugin page in the slider list view at the first table column. 
+									<dl>
+										<dd> Default: <i>Null</i></dd>
+									</dl>
+								</dd>
+							</dl>
+							
+							<hr>
+
+							<p>
+								It is important when you want to insert a slider to check its ID on the MasterSlider WP slider list page. When you removes some sliders, their IDs won't be re-indexed and the sequence may broke up. This is important to keep persistent your sliders preventing unwanted changes on the already inserted ones.
+			                </p>
+			            </div>
+			        </div>
+				</article>
+
+				<article class="content-section" id="slider-callbacks">
+					<div class="row-fluid">
+						<div class="span4">
+							<h4>Using Slider API and Callbacks</h4>
+							<p>Here you can add or remove callback functions to the slider, first select one type of callback function from the dropdown menu and clicking on <img src="../assets/images/screenshots/add.png" alt="Master Slider layer timeline"> to add it to slider. Each callback function is kind of event handler you can add your custom script in the function then slider will execute that when the event dispatches.</p>  
+							<p>Also you can access to the slider api by using "api" variable. </p>
+							<h5> Methods </h5>
+								<pre class="brush: javascript">
+								var api = event.target;
+								
+								api.index(); 		// returns current slide index.
+								api.count(); 		// returns total number of slides.
+								
+								api.next();			// next slide.
+								api.previous();  	// previous slide.
+								api.gotoSlide(4);	// moves to 4th slide.
+								
+								api.pause();	 	// pauses the slider timer.
+								api.resume(); 		// resumes the slider timer.
+								api.currentTime(); 	// returns the percentage of elapsed time.
+								
+								api.destroy(); 		// removes the slider. 
+							</pre>
+								<h5> Properties </h5>
+								<pre class="brush: javascript">
+								api.so					// returns the object of slider options.
+								
+								api.view				// returns the slider transition object.
+								api.view.slideList 		// returns a array of all slides.
+								api.viwe.currentSlide 	// returns the current slide object.
+							</pre>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/callback.PNG" alt="Master Slider layer timeline" class="img-screenshot">	
+						</div>
+					</div>
+				</article>
+
+				<article class="content-section" id="export-import">
+					<div class="row-fluid">
+						<div class="span4">
+							<h4><strong>Exporting Sliders:</strong></h4>
+							<p>
+								<ul>
+									<li>Navigate to MasterSlider admin page and click on <code>Import & Export</code> button.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/export-import-btn.png" alt="Master Slider Export Import Button" class="img-screenshot">
+						</div>
+					</div>
+					
+					<hr style="border:none;">
+
+					<div class="row-fluid">
+						<div class="span4">
+							<p>
+								<ul>
+									<li>Now a popup window will be open as shown in screenshot.</li>
+									<li>You can select specific sliders to export or select them all in one step and finally press export button.</li>
+									<li>Your browser will download an export file containing your sliders once you hit the "Export" button.</li>
+									<li>Keep this file at a secure location.</li>
+								</ul>
+								
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/export-import-dialog.png" alt="Master Slider Export Import Dialog" class="img-screenshot">
+						</div>
+					</div>
+
+					<hr>
+					<br />
+					<br />
+
+					<div class="row-fluid">
+						<div class="span4">
+						<h4><strong>Importing Sliders:</strong></h4>
+							<p>
+								<ul>
+									<li>Use <code>Choose file</code> button to select the export file you previously downloaded and click the "Import" button. This will bring back your previously exported sliders immediately. </li>
+								</ul>
+							</p>
+							<br />
+							<br />
+							<p>
+								<span class="label label-info">Note</span> MasterSlider won't export the images used in your sliders. Moving sites to different servers should not affect the plugin in any way. However, if you only want to move sliders between sites you need to copy the used images from your <code>/wp-content/uploads/</code> folder into the same folder on your new installation.
+							</p>
+						</div>
+						<div class="span8">
+							<img src="../assets/images/screenshots/export-import-dialog.png" alt="Master Slider Export Import Dialog" class="img-screenshot">
+						</div>
+					</div>
+
+
+				</article>
+				
+				<article class="content-section" id="skins">
+					<h3><strong>Slider Skins</strong></h3>
+					
+					<table class="table table-striped table-bordered table-hover">
+									<thead>
+										<tr>
+											<th style="width:300px"> </th>
+											<th style="width:120px">Name</th>
+											<th>Class Name</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/default.gif"></td>
+											<td>default</td>
+											<td>ms-skin-default</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-2.gif"></td>
+											<td>Light 2</td>
+											<td>ms-skin-light-2</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-3.gif"></td>
+											<td>Light 3</td>
+											<td>ms-skin-light-3</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-4.gif"></td>
+											<td>Light 4</td>
+											<td>ms-skin-light-4</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-5.gif"></td>
+											<td>Light 5</td>
+											<td>ms-skin-light-5</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-6.gif"></td>
+											<td>Light 6</td>
+											<td>ms-skin-light-6</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/l-6-r.gif"></td>
+											<td>Light 6 Round</td>
+											<td>ms-skin-light-6 ms-skin-round</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/cont.gif"></td>
+											<td>Contrast</td>
+											<td>ms-skin-contrast</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/b-1.gif"></td>
+											<td>Black 1</td>
+											<td>ms-skin-black-1</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/b-2.gif"></td>
+											<td>Black 2</td>
+											<td>ms-skin-black-2</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/b-2-r.gif"></td>
+											<td>Black 2 Round</td>
+											<td>ms-skin-black-2 ms-skin-round</td>
+										</tr>
+										<tr>
+											<td><img alt="skin" src="../assets/images/skins/metro.gif"></td>
+											<td>Metro</td>
+											<td>ms-skin-metro</td>
+										</tr>
+									</tbody>
+								</table>
+				</article>
+				
+				<article class="content-section" id="embed-url">
+					<h3><strong>Finding YouTube/Viemo Embed URL</strong></h3>
+					<p>Open the video in YouTube/Vimeo, play video and right-click on it, select <code>Copy embed code</code> then paste the embed code in a text editor</p><br />
+					<img src="../assets/images/screenshots/get-embed-code.png" height="514" width="859" alt="Get YouTube/Viemo Embed Code" />
+					<hr /><br />
+					<p>Now you can see video embed URL in embed code which specified as iframe src.</p><br />
+					<img src="../assets/images/screenshots/embed-url.png" height="112" width="915" alt="Get YouTube/Viemo Embed URL" />
+					<hr />
+					<p>Finally in this example your embed url is : <code>//www.youtube.com/embed/lEdC-oDYTVD</code></p><br /><br />
+				</article>
+
+				<article class="content-section" id="language-i18n">
+					<h3><strong>How to translate Master Slider in different languages?</strong></h3>
+					<p>There is two ways of translating Master Slider. Here they are :</p>
+
+					<hr />
+
+					<h4>1 - Using our online translation service (Recommended way)</h4>
+					<p>You can start translating Master Slider by using our <a href="http://translate.averta.net/projects/masterslider/free-version" target="_blank">online translation service</a></p>
+					<br /><br />
+
+					<h4>2 - Using Poedit app</h4>
+					<ol>
+						<li>
+							<strong>Download Poedit</strong>
+							<p>There are several apps available to help you with translating .PO files. PoEdit is a popular one, and it's available on every major platform. You can download it from <a href="http://www.poedit.net/download.php" target="_blank">here</a>. </p>
+						</li>
+						<li>
+							<strong>Start translating</strong>
+							<p>Open the default <code>masterslider.po</code> file from your <code>/wp-content/plugins/master-slider/languages/</code> folder. When you save your work PoEdit will generate you a .MO file which will be needed to apply your work.</p>
+						</li>
+						<li>
+							<strong>Name your files properly</strong>
+							<p>WordPress recognizes your localization by a special formatting of file names. You will need to include the right <strong><a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Language-Codes" target="_blank">language</a></strong> and <strong><a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Country-Codes" target="_blank">country</a></strong> codes so it can identify what language is your work made for.</p>
+							<p>For example, a French localization would have the file names: <code>master-slider-fr_FR.po</code> and <code>master-slider-fr_FR.mo</code>. You must follow this syntax, including the dash, underscore, and lower- or uppercase letters.</p>
+						</li>
+						<li>
+							<strong>Apply your localization</strong>
+							<p>Copy your newly created .PO and .MO files into the <code>/wp-content/plugins/master-slider/languages/</code> folder. WordPress should use them immediately if you named your files properly.</p>
+						</li>
+						<br />
+						<p>Also checkout <a href="http://support.averta.net/envato/knowledgebase/can-translate-wordpress-plugin-using-translate-file/" target="_blank">More detailed article on translating WordPress plugins</a></p>
+					</ol>
+				</article>
+
+				<article class="content-section" id="rate">
+					<h3><strong>I want to rate <strong>Master Slider</strong></strong></h3>
+					<p>Please login to your account on WordPress.org and navigate to <a href="http://wordpress.org/plugins/master-slider/" target="_blank">Plugin's page</a> and <a href="http://wordpress.org/support/view/plugin-reviews/master-slider?rating=5#postform&rf=doc" target="_blank" >rate Master Slider</a>.<br />Thanks in advance!</p>
+					<hr />
+				</article>
+
+				<article class="content-section" id="support">
+					<h3><strong>Support</strong></h3>
+					<hr />
+
+					<h4>If you have any questions please follow these steps:</h4>
+					<ol>
+						<li>Please read item's <a href="http://masterslider.com/doc/wp/free" target="_blank">Documentation </a> </li>
+						<li>Take a look in our <a href="http://wordpress.org/plugins/master-slider/faq/" target="_blank">FAQ</a> page</li>
+						<li>Search plugin's support forum using <a href="https://www.google.com/search?q=site:wordpress.org+%22master+slider%22+%22support%22+your+question+here" target="_blank">this link</a> for finding already asked or similar questions.</li>
+						<li>If you did not find your answer, please post new topic in <a href="http://wordpress.org/tags/master-slider" target="_blank">support forum</a></li>
+					</ol>
+					<br />
+
+
+					<strong>Why support forum?</strong>
+					<ul>
+						<li>It is organized and searchable (that makes support easier and faster)</li>
+					</ul>
+					<br />
+
+					<strong>Supporting our Items INCLUDES</strong>:
+					<ul>
+					  <li>Responding to questions or problems regarding our item and its features</li>
+					  <li>Fixing bugs and reported issues</li>
+					  <li>Providing updates to ensure compatibility with new software versions</li>
+					</ul>
+					<br/>
+
+					<strong>Item support does NOT include</strong>:
+					<ul>
+					  <li>Customization and installation services</li>
+					  <li>Support for third party software and plug-ins</li>
+					</ul>
+					<br/>
+					
+					<p><span class="label label-info">Note</span> We <strong>CANNOT</strong> provide support via email, Please ask your support related questions only in <a href="http://wordpress.org/tags/master-slider/" target="_blank">support forum</a>.</p>
+					<br />
+					<p><span class="label label-info">Important Note</span> For the fast troubleshooting, please send us detailed informations about the issue and make sure that you don't forget to send us your site url where you are using or want to use the item. Please note, that we cannot troubleshoot from screencast videos or screenshots.</p>
+
+				</article>
+
+				<article class="content-section" id="donate">
+					<h3><strong>I want to support Master Slider</strong></h3>
+					<p>We don't ask you to donate, instead, if you want to help us please do one of the following:</p>
+					<ul>
+						<li><a href="http://wordpress.org/support/view/plugin-reviews/master-slider?rating=5#postform&rf=doc" target="_blank" >Rate Master Slider</a> <strong>5 star</strong></li>
+						<li>Write a post or review about <strong>Master Slider</strong></li>
+						<li>Add a link to <strong><a href="http://masterslider.com" target="_blank" >Master Slider</a></strong> on your website.</li>
+					</ul>
+					<br />
+
+					<p>That helps us alot to continue developing this slider.</p>
+					<p>Thanks in advance !</p>
+					<hr />
+
+					
+				</article>
+
+			</section>
+		</div><!-- end div .container -->
+		
+		<script src="../assets/js/jquery-1.8.2.js"></script>
+		<script src="../assets/js/jquery.easing.min.js"></script>
+		<script src="../assets/js/averta.csstweener.min.js"></script>
+		<script src="../syntax-highlighter/scripts/shCore.js"></script>
+		<script src="../syntax-highlighter/scripts/shBrushXml.js"></script>
+		<script src="../syntax-highlighter/scripts/shBrushCss.js"></script>
+		<script src="../syntax-highlighter/scripts/shBrushJScript.js"></script>
+		<script src="../assets/js/main.js"></script>
+	</body>
+</html>
